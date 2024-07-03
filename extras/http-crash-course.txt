@@ -1,0 +1,62 @@
+# What are HTTP headers?
+
+# Ans
+
+-> meta-data = key-value, sent along with request and response
+
+-> you can also create your key value
+
+-> caching, authentication, state management
+
+-> Types (You can create your own types): 
+    Request Headers - from client
+    Response Headers - from server
+    Representation Headers - encoding/compression
+    Payload Headers - data
+    ...more, like security headers
+
+-> Examples:
+    Most common headers:
+        accept: application/json
+        user-agent: who sent the request, which browser,
+        authorization: `Bearer ${token}`
+        content-type: images/pdf
+        cookie: {cookieInfo}
+        cache-control: {data network mein kab tak rehna cha raha}
+    Cors headers:
+        access-control-allow-origin: 
+        access-control-allow-credentials:
+        access-control-allow-method:
+    Security headers:
+        cross-origin-embedders-policy:
+        cross-origin-openers-policy:
+        content-security-policy:
+        x-xss-protection:
+
+-> HTTP methods: Basic set of operations that can be used to interact with server.
+    .GET: retrieve a resource
+    .HEAD: no message body (response headers only)
+    .OPTIONS: what operations are available
+    .TRACE: loopback test (get same data)
+    .DELETE: remove a resource
+    .PUT: replace a resource
+    .POST: interact with resource (mostly add)
+    .PATCH: change part of resource
+    ...more
+
+-> HTTP Status Code: 
+    1xx - Informational
+    2xx - Success
+    3xx - Redirection
+    4xx - Client error
+    5xx - Server error
+    Example: 
+        101: continue               400: Bad Request
+        102: processing             401: UnAuthorized
+        200: ok                     402: Payment Requried                                    
+        201: created                403: Forbidden
+        202: accepted               404: Not found
+        307: temporary redirect     500: Internal server error
+        308: permanent redirect     504: Gateway timeout
+
+    
